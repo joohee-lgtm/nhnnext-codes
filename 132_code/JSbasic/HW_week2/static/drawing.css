@@ -1,0 +1,121 @@
+#MainTitle {
+	width : 1000px;
+	margin-bottom : 20px;
+}
+
+#Canvas{
+	width: 600px; 
+	height: 600px; 
+	float : left;
+	background-color: gray;
+}
+
+.wrap {
+	float : left;
+}
+
+.Drawing {
+	clear : left;
+	height : 200px;
+	background-color: red;
+}
+
+#BgColor {
+	height : 50px;
+	width : 300px;
+	float : left;
+	background-color:rgba(0, 0, 0, 0.2);
+}
+
+#Prev {
+	height : 50px;
+	width : 100px;
+	float : left;
+	background-color:rgba(0, 0, 0, 0.4);
+}
+
+#PenThick {
+	height : 150px;
+	clear : left;
+	width : 70px;
+	float : left;
+	background-color:rgba(0, 0, 0, 0.6);
+}
+
+#PenShape {
+	height : 150px;
+	width : 130px;
+	float : left;
+	background-color:rgba(0, 0, 0, 0.8);
+}
+
+#PenColor {
+	height : 150px;
+	width : 200px;
+	float : left;
+}
+
+.EditDraw {
+	clear : left;
+	height : 100px;
+	background-color: blue;
+}
+
+#Symmetry {
+	height : 100px;
+	width : 150px;
+	float : left;
+	background-color:rgba(0, 0, 0, 0.2);
+}
+
+#Rotate {
+	height : 100px;
+	width : 250px;
+	float : left;
+	background-color:rgba(0, 0, 0, 0.4);
+}
+
+.AddName {
+	clear : left;
+	height : 200px;
+	background-color: yellow;
+}
+
+#InputName{
+	height : 50px;
+	background-color:rgba(0, 0, 0, 0.2);
+}
+
+#Position{
+	height : 150px;
+	width : 200px;
+	float : left;
+	background-color:rgba(0, 0, 0, 0.4);
+}
+
+#Style{
+	height: 150px;
+	width : 200px;
+	float : left;
+	background-color:rgba(0, 0, 0, 0.6);
+}
+
+.Export {
+	clear : left;
+	height : 100px;
+	background-color: green;
+}
+
+#MakeBrooch {
+	height : 100px;
+	width : 300px;
+	float : left;
+	background-color:rgba(0, 0, 0, 0.2);
+}
+
+#Normal {
+	height : 100px;
+	width : 100px;
+	float : left;
+	background-color:rgba(0, 0, 0, 0.6);
+}
