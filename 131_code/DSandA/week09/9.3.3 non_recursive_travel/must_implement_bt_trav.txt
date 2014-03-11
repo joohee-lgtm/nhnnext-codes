@@ -1,0 +1,7 @@
+2013.5.3 non-recursive binanry tree inorder traversal implementation
+stack은 이전에 개발한 동적 스택을 이용해서 개발합니다.
+구현 방법은 자료구조 교재와 강의 자료를 참고합니다.
+
+bt_trav.c의 비어 있는 곳을 구현해야 합니다.
+
+
