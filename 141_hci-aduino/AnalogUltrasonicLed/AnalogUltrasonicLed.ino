@@ -1,0 +1,31 @@
+#define echoPin7 // Echo Pin
+#define trigPin8 // Trigger Pin
+#define LED 9
+intmaximumRange= 200; // Maximum range needed
+intminimumRange= 0; // Minimum range needed
+long duration, distance; // Duration used to calculate distance
+float outputValue= 0.0;
+void setup() {
+Serial.begin(9600);
+pinMode(trigPin, OUTPUT);
+pinMode(echoPin, INPUT);
+}
+
+void loop() {
+digitalWrite(trigPin, LOW);
+delayMicroseconds(2);
+digitalWrite(trigPin, HIGH);
+delayMicroseconds(10);
+digitalWrite(trigPin, LOW);
+duration = pulseIn(echoPin, HIGH);
+//Calculate the distance (in cm) based on the speed of sound.
+distance = duration/58.2;
+if (distance >= maximumRange|| distance <= minimumRange){
+Serial.println("-1");
+} else {
+Serial.println(distance);
+outputValue= map(distance,0,200,0,255);
+analogWrite(LED,outputValue);
+}
+delay(30);
+}
