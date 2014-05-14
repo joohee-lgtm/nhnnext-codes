@@ -5,4 +5,4 @@ aduino & xbee & loudness sensor
 https://drive.google.com/file/d/0B6X-p92mmeKtTUZDTUlpWWxsUTA/edit?usp=sharing
 
 회도로주소
-https://drive.google.com/file/d/0B6X-p92mmeKtTUZDTUlpWWxsUTA/edit?usp=sharing
+https://docs.google.com/file/d/0B6X-p92mmeKtWHZ3eGxFa2c3SUU/edit
