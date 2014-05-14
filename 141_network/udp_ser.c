@@ -11,9 +11,9 @@ int main(int argc, char**argv)
 	int sockfd,n;
 	struct sockaddr_in servaddr,cliaddr;
 	socklen_t len;
-	char mesg[1000000];
 	char buf[100];
-	int result[10];
+	int recvint[10];
+	int sendint[10];
 
 	sockfd=socket(AF_INET,SOCK_DGRAM,0);
 
@@ -23,23 +23,19 @@ int main(int argc, char**argv)
 	servaddr.sin_port=htons(32000);
 	bind(sockfd,(struct sockaddr *)&servaddr,sizeof(servaddr));
 
-	int i =0;
+	int storage = 0;
 	
 	for (;;)
-	{
-		
+	{		
 		len = sizeof(cliaddr);
-		n = recvfrom(sockfd,result,10,0,(struct sockaddr *)&cliaddr,&len);
-		//strcpy(buf,inet_ntoa(cliaddr.sin_addr));
-		//re = result[0] + count;
-		printf("result[0] : %d",result[0]);
-		//printf("%d",i);
-		i = i+result[0];
-		result[1] = i;
-		sendto(sockfd,result,n,0,(struct sockaddr *)&cliaddr,sizeof(cliaddr));
-		printf("-------------------------------------------------------\n");
-		//mesg[n] = 0;
-		//printf("Received the following %d bytes from %s:%d:\n", n, buf, ntohs(cliaddr.sin_port));
-		printf("-------------------------------------------------------\n");
+		n = recvfrom(sockfd,recvint,10,0,(struct sockaddr *)&cliaddr,&len);
+		storage = storage + recvint[0];
+		if (recvint[1] == -1){
+			storage = 0;
+		}
+		sendint[0] = storage;
+		printf("storage : %d\n", storage);
+		printf("receive number : %d\n", recvint[1]);
+		sendto(sockfd,sendint,10,0,(struct sockaddr *)&cliaddr,sizeof(cliaddr));
 	}
 }
